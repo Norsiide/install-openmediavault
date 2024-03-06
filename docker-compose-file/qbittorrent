@@ -1,0 +1,22 @@
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=996
+      - PGID=100
+      - TZ=Europe/Paris
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - /mnt/qbittorrent:/config
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/media/downloads:/downloads
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/media/downloads/auto:/auto
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/media/films:/films
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/media/series:/series
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/media/musique:/musique
+    ports:
+      - 8080:8080
+      - 6881:6881
+    restart: unless-stopped
+    network_mode: bridge

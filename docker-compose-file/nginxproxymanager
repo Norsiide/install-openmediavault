@@ -1,0 +1,19 @@
+services:
+  nginxmanager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginxmanager
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    restart: unless-stopped
+    environment:
+      DB_MYSQL_HOST: 192.168.1.103
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: admin
+      DB_MYSQL_PASSWORD: password
+      DB_MYSQL_NAME: nginxmanager
+    volumes:
+      - /mnt/nginxmanager/data:/data
+      - /mnt/nginxmanager/letsencrypt:/etc/letsencrypt
+    network_mode: bridge

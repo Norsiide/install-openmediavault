@@ -1,0 +1,23 @@
+services:
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=996
+      - PGID=100
+      - TZ=Europe/Paris
+      - NEXTCLOUD_UPLOAD_LIMIT=10G
+      - NEXTCLOUD_MAX_TIME=3600
+      - NEXTCLOUD_MEMORY_LIMIT=512M
+      - NEXTCLOUD_ADDITIONAL_APKS=imagemagick
+      - NEXTCLOUD_ADDITIONAL_APKS=FFmpeg
+      - NEXTCLOUD_ADDITIONAL_PHP_EXTENSIONS=imagick
+      - NEXTCLOUD_ADDITIONAL_APKS=memcached
+      - NEXTCLOUD_ADDITIONAL_PHP_EXTENSIONS=memcached
+    volumes:
+      - /mnt/nextcloud:/config
+      - /srv/dev-disk-by-uuid-07ab46c3-1942-481b-aa68-ac5cbbecf35b/nextcloud:/data
+    ports:
+      - 8087:443
+    restart: unless-stopped
+    network_mode: bridge

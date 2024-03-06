@@ -1,0 +1,13 @@
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    container_name: Bitwarden
+    environment:
+      WEBSOCKET_ENABLED: 'true'
+      SIGNUPS_ALLOWED: 'true'
+    volumes:
+      - /mnt/vaultwarden/data:/data
+    ports:
+      - 8084:80
+    restart: unless-stopped
+    network_mode: bridge
