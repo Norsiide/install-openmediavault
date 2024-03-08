@@ -131,7 +131,7 @@ Utilisez les informations suivantes pour créer un hôte virtuel pour phpMyAdmin
 * celon votre configuration changer le port 80 par un autre car ex: si on utilse nginxmanager il utilise le port 80
 ```
 server {
-   listen 80;
+   listen 8089;
    server_name pma.norsiide.be;
    root /usr/share/phpMyAdmin;
    location / {
@@ -152,7 +152,7 @@ server {
    location ~ \.php$ {
       include /etc/nginx/fastcgi_params;
       fastcgi_split_path_info ^(.+\.php)(/.+)$;
-      fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+      fastcgi_pass unix:/run/php/php8.2-fpm.sock;
       fastcgi_index index.php;
       include fastcgi_params;
       fastcgi_param PHP_VALUE "upload_max_filesize = 100M \n post_max_size=100M";
@@ -178,10 +178,14 @@ Définissez la propriété du répertoire phpMyAdmin.
 ```
 sudo chown -R www-data:www-data /usr/share/phpMyAdmin
 ```
+On ajouter le fichier à nginx
+```
+ sudo ln -s /etc/nginx/sites-available/phpmyadmin.conf /etc/nginx/sites-enabled/
+```
 Redémarrez les services.
 ```
-sudo systemctl restart nginx 
+ sudo nginx -t && sudo systemctl restart nginx
 ```
 ```
-sudo systemctl restart php7.4-fpm
+sudo systemctl restart php8.2-fpm
 ```
