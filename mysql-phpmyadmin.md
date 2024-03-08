@@ -83,7 +83,7 @@ tar -zxvf phpMyAdmin-5.2.1-all-languages.tar.gz
 
 Ensuite, déplacez le dossier de PhpMyAdmin.
 ```
-sudo mv phpMyAdmin-5.1.1-all-langues /usr/share/phpMyAdmin
+sudo mv phpMyAdmin-5.2.1-all-language /usr/share/phpMyAdmin
 ```
 Copiez l'exemple de fichier de configuration.
 ```
