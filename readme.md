@@ -93,7 +93,7 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 * (6) et pour le start on clique sur le bouton ( UP )
 
 ## guide config stack
-    - Les volumes portent le /mnt/ # et le dossier de configuration.
+    - Les volumes portant le /mnt/ # et le dossier de configuration.
     - les volumes portant le /srv/dev-id-du-disque # et le dossier data
 * environment: 
     - PUID=996 # id admin dans mon cas
