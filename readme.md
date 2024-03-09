@@ -86,7 +86,7 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 ## Installation d'un stacks docker-compose
 * (1)  Aller dans -> /services/compose/files puis + 
 * (2) Puis ( add ) Et là, On lui met un nom. ( exemple : VaultWarden ou BitWarden )
-* (3) puis on copier le code sois que vous avez trouver sur internet comme les fleet de [LinuxServer](https://linuxserver.io) ou ceux que je vous dans ce guide à cette page [docker-compose-file](https://github.com/Norsiide/install-openmediavault/tree/main/docker-compose-file)
+* (3) puis on copier le code sois que vous avez trouver sur internet comme les fleet de [LinuxServer](https://fleet.linuxserver.io/) ou ceux que je vous dans ce guide à cette page [docker-compose-file](https://github.com/Norsiide/install-openmediavault/tree/main/docker-compose-file)
 * (4) ce qui nous donne
 ![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/docker-compose-vault.png)
 * (5) Pour terminé on clique sur ( save )
