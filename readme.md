@@ -65,8 +65,46 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 * **PS:** Moi, je l'utilise pour les données et le stockage cloud.
 <p align="center"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/raid.png"  alt="RAID"></p>
 
-## Docker & Portainer 
-* Aller ici pour l'installation  [Liens](https://github.com/Norsiide/install-openmediavault/tree/main/install-docker-compose.md)
+## Installation docker-compose
+
+## fichier pour Docker Compose.
+* Aller dans -> /storage/shared-folders
+* Puis on crée le dossier suivant.
+    - compose-files -> /opt/compose ( Disque principal donc SSD )
+    - data -> /mnt ( Disque principal donc SSD )
+    - backup -> /srv/dev-votre-disque-raid/backup ( Disque que nous avons crée pour le raid )
+    ![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/create-dir-share.png)
+
+## Installation docker-compose
+* Aller dans -> /services/compose/settings
+    - compose-files -> /opt/compose ( Disque principal donc le SSD )
+    - data -> /mnt ( Disque principal donc le SSD )
+    - backup -> /srv/dev-votre-disque-raid/backup ( Disque que nous avons créé pour le RAID. )
+* Une fois les dossiers créés, on installe Docker en bas de la page.
+![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/docker-settings.png)
+
+## Installation d'un stacks docker-compose
+* (1)  Aller dans -> /services/compose/files puis + 
+* (2) Puis ( add ) Et là, On lui met un nom. ( exemple : VaultWarden ou BitWarden )
+* (3) puis on copier le code sois que vous avez trouver sur internet comme les fleet de [LinuxServer](https://linuxserver.io) ou ceux que je vous dans ce guide à cette page [docker-compose-file](https://github.com/Norsiide/install-openmediavault/tree/main/docker-compose-file)
+* (4) ce qui nous donne
+![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/docker-compose-vault.png)
+* (5) Pour terminé on clique sur ( save )
+* (6) et pour le start on clique sur le bouton ( UP )
+
+## guide config stack
+    - Les volumes portent le /mnt/ # et le dossier de configuration.
+    - les volumes portant le /srv/dev-id-du-disque # et le dossier data
+* environment: 
+    - PUID=996 # id admin dans mon cas
+    - PGID=100 # id user dans mon cas
+* Pour l'ID, on se connecte en SSH et on exécute la commande.
+```
+id admin
+```
+
+- La plupart de mes configurations viennent de [Liens](https://www.linuxserver.io/)
+
 
 ## ésactiver l'adresse IPv6 (non obligatoire, selon vos besoins). :) )
 
