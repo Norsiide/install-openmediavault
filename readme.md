@@ -95,11 +95,11 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 ## resolution des soucis nextcloud
 - commande de l'occ nextcloud ( docker exec --user www-data -it nom-du-contaire php occ command )
 
-* Pour resoudre les soucis de de maintenance repair
+ Pour resoudre les soucis de de maintenance repair
 ```
 docker exec --user www-data -it nextcloud php occ maintenance:repair --include-expensive
 ```
-* Pour resoudre les soucis de base de donnée 
+ Pour resoudre les soucis de base de donnée 
 ```
 docker exec --user www-data -it nextcloud php occ db:add-missing-columns
 ```
