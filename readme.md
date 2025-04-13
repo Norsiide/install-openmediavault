@@ -93,7 +93,7 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 * (6) et pour le start on clique sur le bouton ( UP )
 
 ## resolution des soucis nextcloud
-    - commande de l'occ nextcloud ( docker exec --user www-data -it nom-du-contaire php occ command )
+- commande de l'occ nextcloud ( docker exec --user www-data -it nom-du-contaire php occ command )
 
 * Pour resoudre les soucis de de maintenance repair
 ```
