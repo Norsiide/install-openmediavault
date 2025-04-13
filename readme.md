@@ -92,16 +92,24 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 * (5) Pour terminé on clique sur ( save )
 * (6) et pour le start on clique sur le bouton ( UP )
 
-## guide config stack
-    - Les volumes portant le /mnt/ # et le dossier de configuration.
-    - les volumes portant le /srv/dev-id-du-disque # et le dossier data
-* environment: 
-    - PUID=996 # id admin dans mon cas
-    - PGID=100 # id user dans mon cas
-* Pour l'ID, on se connecte en SSH et on exécute la commande.
+## resolution des soucis nextcloud
+    - commande de l'occ nextcloud ( docker exec --user www-data -it nom-du-contaire php occ command )
+
+* Pour resoudre les soucis de de maintenance repair
 ```
-id admin
+docker exec --user www-data -it nextcloud php occ maintenance:repair --include-expensive
 ```
+* Pour resoudre les soucis de base de donnée 
+```
+docker exec --user www-data -it nextcloud php occ db:add-missing-columns
+```
+```
+docker exec --user www-data -it nextcloud php occ db:add-missing-indices
+```
+```
+docker exec --user www-data -it nextcloud php occ db:add-missing-primary-keys
+```
+
 
 - La plupart de mes configurations viennent de [Liens](https://www.linuxserver.io/)
 
