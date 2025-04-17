@@ -3,7 +3,7 @@
 # Installation d’un serveur dédié ou VPS sous CasaOS 
 
 * **CasaOS** est un système de type NAS (Network Attached Storage) open source, basé sur Debian, conçu pour être simple à utiliser et accessible à tous. [Lien ver CasaOS](https://casaos.zimaspace.com/)
-<p align="center"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/casaos.png" width="400" alt="norsiide"></p>
+<p align="center"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/casaos.png" alt="norsiide"></p>
 
 * **PS:** Je tiens à rappeler que cette configuration est basée sur mon propre serveur, que je rends public afin de vous aider dans l’installation. Il se peut donc que certaines informations manquent.
 Dans ce cas, n’hésitez pas à me contacter, et je les ajouterai pour faciliter l’installation des prochains utilisateurs.
