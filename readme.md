@@ -59,7 +59,7 @@ docker exec --user www-data -it nextcloud php occ db:add-missing-indices
 docker exec --user www-data -it nextcloud php occ db:add-missing-primary-keys
 ```
 
-## désactiver l'adresse IPv6 (non obligatoire, selon vos besoins). :) )
+## désactiver l'adresse IPv6 (non obligatoire, selon vos besoins).)
 
 On fais la commande:
  
