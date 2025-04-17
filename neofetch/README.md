@@ -22,6 +22,7 @@ apt install neofetch
 neofetch
 ```
 ( 4 ) Pour personnaliser Neofetch, ajoutez le fichier `config.conf` dans le répertoire  `/root/.config/neofetch`.
+
 ( 5 ) Pour activer le message du (MOTD) lors de la connexion SSH, exécutez la commande suivante :
  
 ```
