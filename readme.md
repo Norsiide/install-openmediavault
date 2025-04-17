@@ -2,7 +2,7 @@
 
 # Installation d'un serveur DEDICATED ou VPS sous (CasaOS). 
 [![WebSite](https://img.shields.io/website?down_message=Offline&label=WebSite&up_message=Online&url=https%3A%2F%2Fnorsiide.be)](https://norsiide.be) 
-[![Discord](https://img.shields.io/discord/1126981605785866341?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/tw9cPF5jrx)
+[![Discord](https://img.shields.io/discord/1362458470909087866?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/tw9cPF5jrx)
 
 * **Casaos** Est un systeme de nas basé sur debian
 * **PS:** Je tiens à rappele que cette configuration est basé sur mon serveur que je met en public pour vous aider dans l'installation donc il manquera surment des chose dans ce cas concter moi et je les r'ajouterais dedans pour aider votre prochain
