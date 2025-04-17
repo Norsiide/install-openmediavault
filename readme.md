@@ -1,10 +1,10 @@
 <p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="norsiide"></p>
 
-# Installation du serveur DEDICATED ou VPS (OpenMediaVault). 
+# Installation d'un serveur DEDICATED ou VPS sous (CasaOS). 
 [![WebSite](https://img.shields.io/website?down_message=Offline&label=WebSite&up_message=Online&url=https%3A%2F%2Fnorsiide.be)](https://norsiide.be) 
-[![Discord](https://img.shields.io/discord/1126981605785866341?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/EV3fAhFZJT)
+[![Discord](https://img.shields.io/discord/1126981605785866341?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/tw9cPF5jrx)
 
-* **OpenMediaVault** Est un systeme de nas basé sur debian
+* **Casaos** Est un systeme de nas basé sur debian
 * **PS:** Je tiens à rappele que cette configuration est basé sur mon serveur que je met en public pour vous aider dans l'installation donc il manquera surment des chose dans ce cas concter moi et je les r'ajouterais dedans pour aider votre prochain
 * **Contact**
     - Discord [Rejoin notre communauté](https://discord.gg/EV3fAhFZJT)
