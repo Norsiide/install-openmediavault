@@ -1,23 +1,20 @@
-<p align="center"><img src="https://i.pinimg.com/originals/f8/b2/5a/f8b25aff7683fad18b449904c2ae0638.jpg" width="400" alt="norsiide"></p>
+<p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="norsiide"></p>
 
 # Commande linux
 
-[![WebSite](https://img.shields.io/website?down_message=Offline&label=WebSite&up_message=Online&url=https%3A%2F%2Fnorsiide.be)](https://norsiide.be)
-[![Discord](https://img.shields.io/discord/1126981605785866341?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/EV3fAhFZJT)
+Voici les commandes Linux couramment utilisées pour configurer et gérer un serveur Debian :
 
-**# Commande linux** commande utilisé pour serveur debian
+## Pour envoyer un dossier vers un serveur distant, vous pouvez utiliser la commande suivante :
 
-## Pour envoyer un dossier vers un serveur distant, vous pouvez utiliser la commande.
+L'option -l permet de définir une limite, suivie du nombre spécifié.
 
--l = limite puis le nombre 
-
--r = pour dire à linux que c'est un dossier
+L'option -r permet à Linux de savoir que l'élément spécifié est un dossier, souvent utilisée dans des commandes de copie ou de déplacement récursif.
 
 ```
 scp -l 100000 -r /home/dl/ user@adresse-ip:/dossier
 ```
 
-## Pour voir les utilisateurs connectés sur un port particulier, vous pouvez utiliser la commande.
+## Si vous souhaitez afficher les utilisateurs connectés à un port spécifique, vous pouvez exécuter la commande suivante dans votre terminal.
 
 ```
 sudo netstat -tuln | grep :22
@@ -25,23 +22,24 @@ sudo netstat -tuln | grep :22
 
 ## Gestions de fichiers.
 
-supprimer
+Pour supprimer un fichier ou un dossier, utilisez la commande suivante :
 ``` 
 rm -r /racine /distination | progress  -m
 ```
-deplacer
+Pour déplacer un fichier ou un dossier, utilisez la commande suivante :
 ```
 mv -r /racine /distination | progress  -m
 ```
-copier
+Pour copier un fichier ou un dossier, utilisez la commande suivante :
+
 ```
 cp -r  /racine /distination | progress  -m
 ```
-Ou avec rsync
+ous pouvez également utiliser rsync pour copier un fichier ou un dossier de manière plus efficace, surtout lorsqu'il s'agit de synchroniser des répertoires.
 ```
 rsync -avz --progress /file/to/copy /destination/directory/
 ```
-# Pour couper un serveur et le redémarrer après un certain nombre de secondes, vous pouvez utiliser les commandes suivantes :
+# Si vous souhaitez éteindre un serveur et le redémarrer après un délai spécifique, utilisez les commandes suivantes :
 ```
 rtcwake -m off -s 28800
 ```
