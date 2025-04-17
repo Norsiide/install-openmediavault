@@ -30,8 +30,7 @@ Maintenant vous pouvez accedez via l'url que casaos vous à notifier à l'instal
 
 ## Changement du port de CasaOS
 * accédez dans le menu des parametre sur le webgui de casaos et on met le port (9090) à la place de (80) on change le port pour la raison suivante car nous allons utilisé un container avec proxy nginx manager qui à besoin des port suivant 80/443 donc nous somme obligé de change celui de base
-![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/port-casaos.png)
-
+<p align="center"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/port-casaos.png"  alt="port casaos"></p>
 
 ## Il faut maintenant installer le script de connexion SSH.
 
