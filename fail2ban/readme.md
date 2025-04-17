@@ -1,33 +1,31 @@
 <p align="center"><img src="https://paranoiaque.fr/wp-content/uploads/2023/01/2192e09a9529040554cc0492d32394a69d0fb3ea.png" width="400" alt="norsiide"></p>
 
 # Configuration de Fail2Ban.
-[![WebSite](https://img.shields.io/website?down_message=Offline&label=WebSite&up_message=Online&url=https%3A%2F%2Fnorsiide.be)](https://norsiide.be)
-[![Discord](https://img.shields.io/discord/1126981605785866341?color=5865f2&label=Discord&logo=discord&logoColor=fff&style=flat-square)](https://discord.gg/EV3fAhFZJT)
 
-**Fail2Ban** est un système de bannissement basé sur les logs Linux.
+**Fail2Ban** est un outil de sécurité qui surveille les journaux du système (logs) et bloque les adresses IP qui tentent des connexions non autorisées ou malveillantes.
 
 
-# Installation de Fail2Ban.
+# Voici les étapes pour installer Fail2Ban sur votre système Linux :
 
-## Mise à jour et installation des paquets.
+## Nous allons maintenant procéder à la mise à jour des paquets existants et à l’installation des nouveaux paquets nécessaires.
 
-(1) On met à jour tous les paquets Linux :
+(1) Nous allons maintenant mettre à jour tous les paquets installés sur votre système Linux.
 
 ```
 sudo apt update && sudo apt upgrade
 ```
-(2) On install fail2ban
+(2) Nous allons maintenant procéder à l'installation de Fail2Ban sur votre système.
  
 ```
 sudo apt install fail2ban
 ```
-## Maintenant, on va configurer Fail2Ban.
+## Passons maintenant à la configuration de Fail2Ban pour personnaliser sa protection.
 
-* ( 1 ) On se rend dans le dossier
+* ( 1 ) Rendez-vous dans le répertoire suivant pour commencer la configuration de Fail2Ban :
   ```
   /etc/fail2ban
   ```
-* ( 2 ) On remplace tout le contenu par celui-ci.
+* ( 2 ) Vous devez maintenant remplacer tout le contenu actuel par celui-ci :
 
 **( ATTENTION )** Vous devrais changer certain jail.d exemple ( nextcloud ):
 (1) On imagine que mon fichier ou le logs de nextcloud ce trouve c'est (/srv/dev-mon-disque-raid/nextcloud/nextcloud.log)
@@ -40,62 +38,62 @@ Conclusion bien verifier les ficher de log du dossier fail.d
   
 
 
-## Voici les commandes de gestion :
+## Voici les principales commandes de gestion disponibles :
 
-Pour arrêter le serveur Fail2Ban, vous pouvez utiliser la commande suivante :
+Si vous souhaitez arrêter le service Fail2Ban, exécutez la commande suivante :
 ```
 sudo service fail2ban stop
 ```
 
-Pour démarrer le serveur Fail2Ban, utilisez la commande suivante :
+Si vous souhaitez démarrer le service Fail2Ban, exécutez la commande suivante :
 ```
 sudo service fail2ban start
 ```
 
-Pour recharger le serveur Fail2Ban, utilisez la commande suivante :
+Si vous devez recharger la configuration de Fail2Ban, exécutez la commande suivante :
 ```
 sudo service fail2ban reload
 ```
 
-Pour redémarrer le serveur Fail2Ban, utilisez la commande suivante :
+Si vous souhaitez redémarrer le service Fail2Ban, exécutez la commande suivante :
 ```
 sudo service fail2ban restart
 ```
-Pour vérifier le statut du serveur Fail2Ban, utilisez la commande suivante :
+Pour consulter l’état actuel du service Fail2Ban, exécutez la commande suivante :
 ```
 sudo service fail2ban status
 ```
-## Voici les commandes relatives aux "prisons" dans Fail2Ban :
+## Voici les commandes que vous pouvez utiliser pour gérer les "prisons" (les règles de filtrage) dans Fail2Ban :
 
-Pour vérifier le statut d'une prison spécifique, par exemple "ssh", utilisez la commande suivante :
+Pour consulter l’état d'une prison spécifique, comme celle de "ssh", exécutez la commande suivante :
 ```
 sudo fail2ban-client status ssh 
 ```
 
-Pour vérifier le statut de toutes les prisons (jails), utilisez la commande suivante :
+Pour afficher le statut de toutes les prisons (jails) de Fail2Ban, exécutez la commande suivante :
 ```
 sudo fail2ban-client status
 ```
 
-Pour bannir une adresse IP depuis une prison (par exemple, ssh), utilisez la commande suivante :
+Si vous souhaitez bannir une adresse IP dans une prison spécifique, comme "ssh", exécutez la commande suivante :
 ```
 sudo fail2ban-client set ssh banip 125.24.254.25
 ```
 
 
-Pour débannir une adresse IP depuis une prison spécifique, utilisez la commande suivante :
+Pour débannir une adresse IP d'une prison spécifique, comme "ssh", exécutez la commande suivante :
 ```
 sudo fail2ban-client set ssh unbanip 125.24.254.25
 ```
-* Assurez-vous de remplacer "ssh" par le nom de la prison appropriée si nécessaire.
+* N'oubliez pas de remplacer "ssh" par le nom de la prison que vous souhaitez gérer, le cas échéant.
 
 
-Pour débannir une adresse IP de toutes les prisons, utilisez la commande suivante :
+Si vous souhaitez débannir une adresse IP de toutes les prisons, exécutez la commande suivante :
 ```
 sudo fail2ban-client unban 125.24.254.25
 ```
 
-Pour débannir toutes les adresses IP, utilisez la commande suivante :
+Si vous souhaitez débannir toutes les adresses IP bloquées, exécutez la commande suivante :
 ```
 sudo fail2ban-client unban --all
 ```
