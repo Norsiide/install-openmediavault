@@ -2,29 +2,27 @@
 
 # Installations neofetch
 
-**Installations neofetch** est un petit script qui vous permet d'afficher les informations debian au login ssh
+**Neofetch** est un script léger qui vous permet d'afficher les informations de votre système Debian à chaque connexion SSH.
 
-# Installations du system
+# Voici les étapes pour installer Neofetch sur votre système Debian :
 
-( 1 ) On met à jour tout les paquet linux:
-
+( 1 ) Nous allons maintenant procéder à la mise à jour de tous les paquets Linux sur votre système.
 ```
 apt update
 ```
 
-( 2 ) On install (neofetch)
+( 2 ) Nous allons maintenant procéder à l'installation de Neofetch sur votre système.
  
 ```
 apt install neofetch
 ```
-( 3 ) On peut tester les motd  avec la commande:
+( 3 ) Pour tester le message (MOTD), utilisez la commande suivante :
  
 ```
 neofetch
 ```
-( 4 ) On ajoute le ficher config.conf dans le /root/.config/neofetch
-
-( 5 ) On peut effectué la commande suivante pour activer le motd avec ssh:
+( 4 ) Pour personnaliser Neofetch, ajoutez le fichier `config.conf` dans le répertoire  `/root/.config/neofetch`.
+( 5 ) Pour activer le message du (MOTD) lors de la connexion SSH, exécutez la commande suivante :
  
 ```
 echo "neofetch" >> /etc/profile.d/mymotd.sh && chmod +x /etc/profile.d/mymotd.sh
