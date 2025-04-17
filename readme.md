@@ -1,8 +1,10 @@
-<p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="debian 12"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/casaos.png" width="400" alt="casaos"></p>
+<p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="norsiide"></p>
 
 # Installation d'un serveur DEDICATED ou VPS sous (CasaOS). 
 
 * **Casaos** Est un systeme de nas basé sur debian [Lien ver CasaOS](https://casaos.zimaspace.com/)
+<p align="center"><img src="https://github.com/Norsiide/install-openmediavault/blob/main/img/casaos.png" width="400" alt="norsiide"></p>
+
 * **PS:** Je tiens à rappele que cette configuration est basé sur mon serveur que je met en public pour vous aider dans l'installation donc il manquera surment des chose dans ce cas concter moi et je les r'ajouterais dedans pour aider votre prochain
 * **Contact**
     - Discord [Rejoin notre communauté](https://discord.gg/EV3fAhFZJT)
