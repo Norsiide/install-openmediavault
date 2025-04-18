@@ -1,4 +1,6 @@
-Bien sûr ! Voici un **script de sauvegarde quotidien avec `rsync`** qui crée une copie incrémentielle chaque jour, tout en supprimant les anciens backups pour éviter de saturer ton espace disque.
+<p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="norsiide"></p>
+
+**script de sauvegarde quotidien avec `rsync`** qui crée une copie incrémentielle chaque jour, tout en supprimant les anciens backups pour éviter de saturer ton espace disque.
 
 ---
 
