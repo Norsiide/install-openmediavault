@@ -22,21 +22,29 @@ sudo apt install fail2ban
 ## Passons maintenant à la configuration de Fail2Ban pour personnaliser sa protection.
 
 * ( 1 ) Rendez-vous dans le répertoire suivant pour commencer la configuration de Fail2Ban :
-  ```
-  /etc/fail2ban
-  ```
-* ( 2 ) Vous devez maintenant remplacer tout le contenu actuel par celui-ci :
+```
+cd /etc/fail2ban
+```
+* ( 2 ) Vous devez maintenant copier tout le contenu actuel par celui-ci :
 
 **( ATTENTION )** Vous devrais changer certain jail.d exemple ( nextcloud ):
-(1) On imagine que mon fichier ou le logs de nextcloud ce trouve c'est (/srv/dev-mon-disque-raid/nextcloud/nextcloud.log)
+(1) On imagine que mon fichier ou le logs de nextcloud ce trouve c'est (/DATA/AppData/big-bear-nextcloud/html/data/nextcloud.log)
 ```
 sudo nano /etc/fail2ban/jail.d/nextcloud.conf
 ```
 ![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/nextcloud-path.png)
 
-Conclusion bien verifier les ficher de log du dossier fail.d
-  
+## Passons maintenant à la configuration de discord webhook
 
+(1)il vous suffis de crée un salon sur votre serveur discord
+
+(2)une fois crée on va dans configuration du salon puis integration et on recupere l'url du webhook 
+
+(3) maintenant on le colle dans le fichier `/etc/fail2ban/action.d/nextcloud-auth.conf`
+```
+nano /etc/fail2ban/action.d/nextcloud-auth.conf
+```
+![Screenshot](https://github.com/Norsiide/install-openmediavault/blob/main/img/discord-notification.png)
 
 ## Voici les principales commandes de gestion disponibles :
 

@@ -1,0 +1,13 @@
+[vaultwarden-docker]
+enabled = true
+port = 0:65535
+chain = DOCKER-USER
+filter = vaultwarden-auth
+logpath = /DATA/AppData/vaultwarden/data/access.log
+
+[vaultwarden]
+enabled = true
+port = 0:65535
+chain = INPUT
+filter = vaultwarden-auth
+logpath = /DATA/AppData/vaultwarden/data/access.log
