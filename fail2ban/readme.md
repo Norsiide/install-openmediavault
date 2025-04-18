@@ -27,8 +27,12 @@ cd /etc/fail2ban
 ```
 * ( 2 ) Vous devez maintenant copier tout le contenu actuel par celui-ci :
 
-**( ATTENTION )** Vous devrais changer certain jail.d exemple ( nextcloud ):
-(1) On imagine que mon fichier ou le logs de nextcloud ce trouve c'est (/DATA/AppData/big-bear-nextcloud/html/data/nextcloud.log)
+**( ATTENTION )** Il est nécessaire d’ajuster certains fichiers dans le dossier jail.d pour activer la surveillance de services spécifiques.
+Par exemple, pour Nextcloud, vous devrez créer ou modifier un fichier dédié afin que Fail2Ban puisse surveiller correctement ses logs.
+
+(1) Imaginons que le fichier de logs de Nextcloud se trouve ici :
+`/DATA/AppData/big-bear-nextcloud/html/data/nextcloud.log`
+
 ```
 sudo nano /etc/fail2ban/jail.d/nextcloud.conf
 ```
@@ -36,11 +40,12 @@ sudo nano /etc/fail2ban/jail.d/nextcloud.conf
 
 ## Passons maintenant à la configuration de discord webhook
 
-(1)il vous suffis de crée un salon sur votre serveur discord
+(1)Pour commencer, il vous suffit simplement de créer un salon (texte) sur votre serveur Discord.
 
-(2)une fois crée on va dans configuration du salon puis integration et on recupere l'url du webhook 
+(2)Une fois le salon Discord créé, accédez à ses paramètres, puis cliquez sur Intégrations.
+Ensuite, créez un webhook (ou utilisez-en un existant) et copiez l’URL fournie — elle servira à envoyer des messages vers ce salon automatiquement.
 
-(3) maintenant on le colle dans le fichier `/etc/fail2ban/action.d/nextcloud-auth.conf`
+(3) Maintenant, collez l'URL du webhook dans le fichier de configuration prévu à cet effet. `/etc/fail2ban/action.d/nextcloud-auth.conf`
 ```
 nano /etc/fail2ban/action.d/nextcloud-auth.conf
 ```
