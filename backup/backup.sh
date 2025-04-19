@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # === CONFIGURATION ===
-SRC_DIRS=(
-    "/home/user/Documents"
-    "/etc"
-    "/var/www"
-)
+SRC_DIRS=("/home/user/Documents" "/etc" "/var/www")
 DEST="/mnt/backup"
 RETENTION_DAYS=7
 LOG="/var/log/rsync_backup.log"
@@ -19,12 +15,7 @@ WEBHOOK_URL="https://discord.com/api/webhooks/TON_ID/TON_TOKEN"
 HOSTNAME=$(hostname)
 
 # === EXCLUSIONS ===
-EXCLUDES=(
-    "node_modules/"
-    ".cache/"
-    "Downloads/"
-    "tmp/"
-)
+EXCLUDES=("node_modules/" ".cache/" "Downloads/" "tmp/")
 EXCLUDE_PARAMS=()
 for excl in "${EXCLUDES[@]}"; do
     EXCLUDE_PARAMS+=(--exclude="$excl")
