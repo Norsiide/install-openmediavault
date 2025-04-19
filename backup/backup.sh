@@ -1,18 +1,3 @@
-<p align="center"><img src="https://wiki.debian.org/FrontPage?action=AttachFile&do=get&target=11-bullseye-wiki-banner-04.png" width="400" alt="norsiide"></p>
-
-Parfait ! Voici le **script de sauvegarde complet**, 100% prêt à l’emploi :  
-- 🔁 Sauvegarde multiple dossiers
-- 📂 Exclut certains dossiers
-- 🧹 Supprime les backups anciens
-- 🧨 Envoie une **notification Discord**
-  - ✅ Message vert si tout s’est bien passé
-  - ❌ Message rouge avec `@here` et **logs d’erreur** en cas de souci
-
----
-
-## 🖥️ Script complet `backup.sh`
-
-```bash
 #!/bin/bash
 
 # === CONFIGURATION ===
@@ -135,25 +120,3 @@ curl -H "Content-Type: application/json" \
      -X POST \
      -d "$JSON" \
      "$WEBHOOK_URL"
-```
-
----
-
-## 📌 Instructions :
-
-1. **Remplace** :
-   - `TON_ID` et `TON_TOKEN` dans `WEBHOOK_URL`
-2. **Ajoute à la crontab** :
-   ```bash
-   crontab -e
-   ```
-   ```cron
-   0 2 * * * /usr/local/bin/backup.sh >> /var/log/rsync_backup.log 2>&1
-   ```
-
-3. Donne les bons droits :
-   ```bash
-   chmod +x /usr/local/bin/backup.sh
-   ```
-
----
