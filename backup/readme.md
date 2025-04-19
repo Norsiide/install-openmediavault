@@ -36,7 +36,7 @@ sudo apt install rsync jq curl -y
    sudo nano /usr/local/bin/backup.sh
    ```
 
-2. Copie et colle le **script complet** que je t’ai fourni plus tôt dans ce fichier.
+2. Copie et colle le **script complet** qui ce trouve dans le fichier backup.sh.
 
 3. Sauvegarde et ferme l’éditeur (`CTRL + O`, puis `CTRL + X`).
 
