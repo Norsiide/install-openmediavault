@@ -22,7 +22,7 @@ ERROR_LOG="/tmp/backup_error.log"
 send_discord_notification() {
     local title="$1"; local description="$2"; local color="$3"; shift; shift; shift
     local fields="$@"
-
+ 
     # Construit le JSON via jq
     payload=$(jq -n \
       --arg title "$title" \
